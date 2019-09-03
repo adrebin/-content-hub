@@ -1,0 +1,18 @@
+default: 
+  ignore: "ignore"
+  
+production:
+  appName: "Hub"                 # name of the endpoint (unique to your account on Connect)
+  appTitle: "Content Hub"        # display name for the content
+  appPrimaryDoc: "index.html"    # the primary file
+  appId: 1
+  account: !expr rsconnect::accounts()$name
+  server: ""                     # Connect server
+  
+develop:
+  appName: "Hub-Dev"             # name of the endpoint (unique to your account on Connect)
+  appTitle: "Content Hub-Dev"    # display name for the content
+  appPrimaryDoc: "index.html"    # the primary file
+  appId: 2
+  account: !expr rsconnect::accounts()$name
+  server: ""                     # Connect server

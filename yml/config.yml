@@ -1,0 +1,49 @@
+default:
+  ignore: "default, ignore"
+
+featured:
+  red_panda:
+    title: "Red Panda"
+    image: "www/imgs/red_panda.png"
+    link: "https://en.wikipedia.org/wiki/Red_panda"
+    caption: "Red Pandas are cool"
+    creator: "Alina Drebin"
+    
+  panda:
+    title: "Panda"
+    image: "www/imgs/panda.png"
+    link: "https://en.wikipedia.org/wiki/Panda"
+    caption: "Pandas are also cool"
+    creator: "Alina Drebin"
+  
+  golden:
+    title: "Golden Retriever"
+    image: "www/imgs/golden.png"
+    link: "https://en.wikipedia.org/wiki/Golden_retriever"
+    caption: "Golden retrievers are fluffy"
+    creator: "Alina Drebin"
+ 
+
+listing:
+   fish:
+    title: "Fish"
+    image: "www/imgs/fish.png"
+    link: "https://en.wikipedia.org/wiki/Fish"
+    caption: "Fish make bubbles, check it out"
+    creator: "Alina Drebin"
+    
+    
+docs:
+  dplyr:
+    title: "dplyr Package"
+    image: "www/imgs/dplyr.png"
+    link: "https://rdrr.io/cran/dplyr/"
+    caption: "A fast, consistent tool for working with data frame like objects, both in memory and out of memory."
+    creator: "Hadley Wickham"
+    
+  lubridate: 
+    title: "lubridate Package"
+    image: "www/imgs/lubridate.png"
+    link: "https://lubridate.tidyverse.org/"
+    caption: "Functions to work with date-times and time-spans."
+    creator: "Vitalie Spinu"

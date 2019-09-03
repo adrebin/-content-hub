@@ -1,0 +1,21 @@
+
+<br><br>
+<center> 
+<!-- <a id="listing" style="text-decoration: none; color:white;"> -->
+<h1 style="padding-top:100px;margin-top:-100px;">Content Listing</h1>
+<!-- </a>  -->
+</center>
+```{r, echo=FALSE, message=FALSE}
+library(purrr)
+source("R/helper_functions.R")
+listing = config::get(file = "yml/config.yml", config="listing")
+featured = config::get(file = "yml/config.yml", config = "featured")
+docs = config::get(file = "yml/config.yml", config="docs")
+data = c(featured, listing,  docs)
+data[["ignore"]] <- NULL
+data[["ignore"]] <- NULL
+data[["ignore"]] <- NULL
+data = data[order(sapply(data, "[[", "title"))]
+thumbs = purrr::map(data, ~thumbnail(.x$title, .x$caption, .x$image, .x$link))
+div(thumbs)
+```

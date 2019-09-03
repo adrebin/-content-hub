@@ -1,0 +1,5 @@
+html_document:
+  self_contained: true
+  lib_dir: libs
+
+

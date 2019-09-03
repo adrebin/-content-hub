@@ -1,0 +1,16 @@
+
+<br><br>
+<!-- <hr style="color:black;height:1px;display:block;clear:both"> -->
+<center> 
+<!-- <a id="docs" style="text-decoration: none; color:white;"> -->
+<h1 style="padding-top:50px;margin-top:-50px;">Package Docs</h1>
+<!-- </a>  -->
+</center>
+```{r, echo=FALSE, message=FALSE}
+library(purrr)
+source("R/helper_functions.R")
+data = config::get(file = "yml/config.yml", config="docs")
+data[["ignore"]] <- NULL
+thumbs = purrr::map(data, ~thumbnail(.x$title, .x$caption, .x$image, .x$link))
+div(thumbs)
+```

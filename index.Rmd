@@ -1,0 +1,45 @@
+
+<br><br>
+<center> 
+<!-- <a id="featured" style="text-decoration: none; color:white;"> -->
+<h1 style="padding-top:60px;margin-top:-60px;">Featured Content</h1>
+<!-- </a>  -->
+</center>
+```{r echo=FALSE, message=FALSE}
+# rmarkdown::render_site()
+# Resize all images in www/imgs
+# resize_imgs("www/imgs/", 2100, 1000)
+# resize_imgs("www/apps/", 100, 100)
+library(htmltools)
+source("R/helper_functions.R")
+# Make items to display
+# See api_test.R for future potential populating with RStudio Connect API
+
+# Load data from config.yml file
+data = config::get(file = "yml/config.yml", config="featured")
+data[["ignore"]] <- NULL
+# Make title indicators
+indicators = make_title_indicators(data)
+# Make content boxes
+boxes = make_content_boxes(data)
+# Make carousel
+make_carousel(indicators, boxes)
+```
+
+
+<br><br><br>
+<hr style="color:white;height:1px;display:block;clear:both">
+<center> 
+<a id="additional" style="text-decoration: none; color:white;">
+<h3 style="padding-top:100px;margin-top:-100px;">Additional Applications</h3>
+<br>
+```{r, echo=FALSE}
+source("R/helper_functions.R")
+apps = purrr::map(config::get(file="yml/app_icon_config.yml"), 
+           ~app_icon(.x$href, .x$title, .x$img))
+apps_str = paste(apps, 
+                 collapse = '<div style = "display:inline-block; margin: 25px;"></div>')
+HTML(apps_str)
+
+```
+</center>

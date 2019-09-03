@@ -1,0 +1,21 @@
+default:
+  github:
+    title: "GitHub"
+    img: "www/apps/GitHub-Mark-Light-120px-plus.png"
+    href: "https://github.com/adrebin"
+    width: NULL
+    height: NULL
+
+  google:
+    title: "Google"
+    img: "www/apps/google.png"
+    href: "https://www.google.com/"
+    width: NULL
+    height: NULL
+    
+  linkedin:
+    title: "LinkedIn"
+    img: "www/apps/LI-In-Bug.png"
+    href: "https://www.linkedin.com/in/alina-drebin"
+    width: NULL
+    height: NULL

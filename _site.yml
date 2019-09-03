@@ -1,0 +1,24 @@
+name: "Content Hub"
+output_dir: "_site"  # necessary for hosting on GitHub; just add it for now
+navbar:  
+  title: '<i class="fab fa-connectdevelop"></i> Content Hub'
+  type: default
+  left:
+    - text: "Featured Content"
+      icon: far fa-star
+      href: "index.html"
+    - text: "Content Listing"
+      icon: far fa-list-alt
+      href: "listings.html"
+    - text: "Package Docs"
+      icon: far fa-file-code
+      href: "docs.html"
+  right:  # you can also use 'right'
+    - text: "GitHub"
+      icon: fa-home  # handy way to use FontAwesome icons in nav!
+      href: "https://github.com/adrebin"
+output:
+  html_document:
+    css: www/theme.css #https://www.bootstrap-live-customizer.com/
+    includes:
+      in_header: html/favicon.html
