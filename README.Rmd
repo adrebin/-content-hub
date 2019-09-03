@@ -1,7 +1,3 @@
----
-title: "README"
-output: md_document
----
 
 ** Content Hub
 HTML and Rmd configurable templates to create a central place to display and link to content,
